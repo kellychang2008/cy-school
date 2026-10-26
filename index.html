@@ -78,6 +78,10 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:va
 .news .foot{margin-top:34px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;position:relative;z-index:1}
 .news .oneline{font-family:var(--serif);font-size:18px}
 .news .oneline span{color:var(--gold)}
+.news .sub{display:flex;flex-direction:column;align-items:flex-end;gap:8px;max-width:340px}
+.news .sub-note{font-size:13.5px;color:#C9C6BC;text-align:right}
+.news .sub-note b{color:var(--gold);border:1px dashed var(--gold);border-radius:6px;padding:0 6px;margin:0 2px}
+@media (max-width:600px){.news .sub{align-items:flex-start}.news .sub-note{text-align:left}}
 
 /* 定位 */
 .intro{padding:72px 0}
@@ -339,7 +343,10 @@ footer .links a:hover{background:var(--gold);border-color:var(--gold);color:var(
     </div>
     <div class="foot">
       <div class="oneline"><span>本週一句話</span>　先讓老師備課變快，學生成效才會被看見。</div>
-      <a class="btn btn-ghost" href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener">LINE 訂閱每週快報</a>
+      <div class="sub">
+        <a class="btn btn-ghost" href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener">LINE 訂閱每週快報</a>
+        <p class="sub-note">加入官方 LINE「Kelly老師543」，傳送關鍵字 <b>快報</b> 即完成訂閱，每週一早上 8 點送到。</p>
+      </div>
     </div>
   </div>
 </section>
