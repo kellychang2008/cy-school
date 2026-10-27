@@ -13,6 +13,7 @@ h1,h2{font-family:var(--serif);font-weight:900;line-height:1.35;color:var(--navy
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s}
 .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-dark)}
 .btn-outline{border:1.5px solid var(--navy);color:var(--navy)}.btn-outline:hover{background:var(--navy);color:var(--cream)}
+.trial{background:var(--gold);color:var(--navy);font-size:13px;font-weight:700;text-align:center;padding:5px 16px;letter-spacing:.04em}
 header{position:sticky;top:0;z-index:50;background:var(--navy);color:var(--cream);border-bottom:1px solid rgba(214,173,90,.35)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .brand{display:flex;align-items:center;gap:10px}
