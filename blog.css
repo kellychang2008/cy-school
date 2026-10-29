@@ -1,5 +1,5 @@
 :root{--navy:#1B2035;--navy-deep:#12162A;--red:#B02219;--red-dark:#8E1A13;--gold:#D6AD5A;--gold-dark:#A8823A;--gold-soft:rgba(214,173,90,.16);--cream:#F9F2E0;--cream-2:#FCF8EE;--ink:#1B2035;--muted:#5E6278;--line:#E8DFC8;--bg:#fff;--radius:12px;--wrap:1160px;
---serif:"Noto Serif TC","Songti TC",serif;--latin:"Cormorant Garamond","Times New Roman",serif;--sans:"Noto Sans TC",system-ui,sans-serif}
+--serif:"Noto Serif TC","Songti TC","PMingLiU","MingLiU",serif;--latin:"Cormorant Garamond","Times New Roman",serif;--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei","Heiti TC",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
