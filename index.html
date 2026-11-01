@@ -226,7 +226,14 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:va
 .cp{display:flex;gap:14px;align-items:flex-start;justify-content:space-between}
 .cp-info{min-width:0;display:flex;flex-direction:column;gap:2px}
 .cp-qr{flex:none;width:96px;height:96px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px}
-.cp-qr svg{width:100%;height:100%;display:block}
+.cp-qr{image-rendering:pixelated;object-fit:contain}
+.hq-ref{margin-top:24px;display:flex;gap:24px;align-items:center;background:var(--navy);color:var(--cream);border-radius:var(--radius);padding:22px 26px;flex-wrap:wrap}
+.hq-ref img{width:120px;height:120px;background:#fff;padding:6px;border-radius:6px;image-rendering:pixelated;flex:none}
+.hq-ref .hq-txt{min-width:0;flex:1}
+@media (max-width:600px){.hq-ref{flex-direction:column;align-items:flex-start;gap:14px}}
+.hq-ref b{display:block;font-family:var(--serif);font-size:20px}
+.hq-ref .kw{color:var(--gold);font-size:18px;font-weight:700;margin:4px 0}
+.hq-ref a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .cp-line{margin-top:8px;align-self:flex-start;font-size:13px;font-weight:700;color:#fff;background:#06C755;border-radius:999px;padding:4px 12px}
 .cp-line span{font-weight:400;opacity:.9;margin-left:4px}
 .cp-line.off{background:var(--gold-soft);color:var(--gold-dark)}
@@ -602,6 +609,14 @@ footer .links a:hover{background:var(--gold);border-color:var(--gold);color:var(
     <h2>6 所直營校，是這套系統的實證場</h2>
     <p class="lead">想看實際上課？可以預約到直營校觀課。家長詢問孩子的課程，請掃描 QR Code 或點「加入 LINE」，直接聯絡各校。</p>
     <div class="campus" id="campusList"></div>
+    <div class="hq-ref">
+      <img src="qr/hq.png" alt="總部官方 LINE QR Code" width="120" height="120" loading="lazy">
+      <div class="hq-txt">
+        <b>不確定哪一校最近？</b>
+        <div class="kw">加總部官方 LINE @255gvcyl，傳送「課程＋居住區域」</div>
+        <div>由總部協助轉介鄰近校區。手機請點 <a href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener">加入總部 LINE</a>。</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -689,24 +704,20 @@ footer .links a:hover{background:var(--gold);border-color:var(--gold);color:var(
 
 <script>
 const campuses=[
-  {n:"小港校",t:"07-8026363",a:"高雄市小港區沿海一路337號3樓",tag:"創始校",line:"@tgc1912f"},
-  {n:"龍華校",t:"07-5509880",a:"高雄市左營區自由二路165號5樓",line:"@ahb4312w"},
-  {n:"青年校",t:"07-7458999",a:"高雄市鳳山區光復路一段189號",line:"@cycn"},
-  {n:"華山校",t:"07-8060066",a:"高雄市小港區宏文路182號",line:"@482dswlt"},
-  {n:"漢民校",t:"07-8071111",a:"高雄市小港區華盛街42號",line:"@081yocze"},
-  {n:"自由校",t:"07-5506277",a:"高雄市左營區自由二路55號",tag:"2025",line:""}
+  {n:"小港校",t:"07-8026363",a:"高雄市小港區沿海一路337號3樓",tag:"創始校",line:"@tgc1912f",qr:"xiaogang"},
+  {n:"龍華校",t:"07-5509880",a:"高雄市左營區自由二路165號5樓",line:"@ahb4312w",qr:"longhua"},
+  {n:"青年校",t:"07-7458999",a:"高雄市鳳山區光復路一段189號",line:"@cycn",qr:"qingnian"},
+  {n:"華山校",t:"07-8060066",a:"高雄市小港區宏文路182號",line:"@482dswlt",qr:"huashan"},
+  {n:"漢民校",t:"07-8071111",a:"高雄市小港區華盛街42號",line:"@081yocze",qr:"hanmin"},
+  {n:"自由校",t:"07-5506277",a:"高雄市左營區自由二路55號",tag:"2025",line:"@693nfsfq",qr:"ziyou"}
 ];
 const lineUrl=id=>"https://line.me/R/ti/p/"+encodeURIComponent(id);
 document.getElementById("campusList").innerHTML=campuses.map((c,i)=>`
   <div class="cp">
     <div class="cp-info"><h3>${c.n}${c.tag?`<i>${c.tag}</i>`:""}</h3><div class="addr">${c.a}</div><div class="tel">${c.t}</div>
     ${c.line?`<a class="cp-line" href="${lineUrl(c.line)}" target="_blank" rel="noopener">加入 LINE <span>${c.line}</span></a>`:`<div class="cp-line off">LINE 即將開放</div>`}</div>
-    ${c.line?`<div class="cp-qr" id="qr${i}" aria-label="${c.n} LINE QR Code"></div>`:""}
+    ${c.qr?`<img class="cp-qr" src="qr/${c.qr}.png" alt="${c.n} LINE QR Code" width="96" height="96" loading="lazy">`:""}
   </div>`).join("");
-(function(){
-  const draw=()=>campuses.forEach((c,i)=>{ if(!c.line) return; const q=qrcode(0,"M"); q.addData(lineUrl(c.line)); q.make(); const el=document.getElementById("qr"+i); if(el) el.innerHTML=q.createSvgTag({cellSize:3,margin:2,scalable:true}); });
-  const s=document.createElement("script"); s.src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"; s.onload=draw; s.onerror=()=>document.querySelectorAll(".cp-qr").forEach(e=>e.remove()); document.head.appendChild(s);
-})();
 document.getElementById("yr").textContent=new Date().getFullYear();
 document.querySelectorAll("#menu a").forEach(a=>a.addEventListener("click",()=>document.getElementById("menu").classList.remove("open")));
 </script>
