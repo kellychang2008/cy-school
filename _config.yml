@@ -1,0 +1,13 @@
+# GitHub Pages 預設使用 Jekyll（此儲存庫沒有 .nojekyll）。
+# exclude 只影響 Jekyll 輸出，README.md 不會被複製到公開網站。
+# HTML 的 noindex 維持不變，此設定不會讓網站被索引。
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
