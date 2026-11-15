@@ -252,6 +252,11 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:va
 .hq-ref b{display:block;font-family:var(--serif);font-size:20px}
 .hq-ref .kw{color:var(--gold);font-size:18px;font-weight:700;margin:4px 0}
 .hq-ref a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.trial-teaser{margin-top:28px;background:var(--cream);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--radius);padding:26px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.trial-teaser h2{font-size:clamp(24px,3vw,32px);margin:6px 0 8px}
+.trial-teaser .lead{margin:0}
+.trial-teaser .btn{flex:none}
+@media (max-width:700px){.trial-teaser{flex-direction:column;align-items:flex-start}}
 .cp-line{margin-top:8px;align-self:flex-start;font-size:13px;font-weight:700;color:#fff;background:#06C755;border-radius:999px;padding:4px 12px}
 .cp-line span{font-weight:400;opacity:.9;margin-left:4px}
 .cp-line.off{background:var(--gold-soft);color:var(--gold-dark)}
@@ -356,6 +361,7 @@ footer .links a:hover{background:var(--gold);border-color:var(--gold);color:var(
       <li><a href="#camps">營隊・學校合作</a></li>
       <li><a href="#platforms">學習平台</a></li>
       <li><a href="#press">新聞中心</a></li>
+      <li><a href="trial.html">試聽流程</a></li>
       <li><a href="#blog">部落格</a></li>
       <li class="menu-cta"><a href="#contact">預約開班諮詢</a></li>
     </ul>
@@ -675,6 +681,14 @@ footer .links a:hover{background:var(--gold);border-color:var(--gold);color:var(
         <div>由總部協助轉介鄰近校區。手機請點 <a href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener">加入總部 LINE</a>。</div>
       </div>
     </div>
+    <div class="trial-teaser">
+      <div>
+        <div class="eyebrow">Parents</div>
+        <h2>試聽流程與常見問題</h2>
+        <p class="lead">給家長看的草稿：五個步驟，加上幾歲開始、外師、人數、分班、學費等問答。還沒確認的地方會標出來。</p>
+      </div>
+      <a class="btn btn-red" href="trial.html">看試聽流程與常見問題</a>
+    </div>
   </div>
 </section>
 
@@ -757,6 +771,7 @@ footer .links a:hover{background:var(--gold);border-color:var(--gold);color:var(
       <div class="links">
         <a href="https://lin.ee/U9rxbTw" target="_blank" rel="noopener">LINE：Kelly老師543</a>
         <a href="#campus">簡誼外語直營校</a>
+        <a href="trial.html">試聽流程</a>
         <a href="https://www.facebook.com/profile.php?id=100063753504000" target="_blank" rel="noopener">Facebook</a>
         <a href="privacy.html">隱私權政策</a>
       </div>
