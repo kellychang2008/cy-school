@@ -20,18 +20,26 @@
       },
       "branches": {
         "huashan": {
-          "status": "verified"
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02uByVaeYrFhRQRkfbzsoo3WctgJ3j9cX9CbQL5WynSE6txgcbRWRuV5LTeXjusNpzl&id=100077420157448"
         },
         "xiaogang": {
-          "status": "verified"
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/chienyi.english/posts/pfbid022msezDXDAKdyqSv8m7nHLBCdts8GUd5sDmwWRpgehe99KeMtufDhWUXkxZSvo6DRl"
         },
         "longhua": {
-          "status": "submitted_pending_verification"
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/ahb4312/posts/pfbid02Kw76V8RPPnkYwujgYECULzDjYAVe3BFvXRHWms6xjizri61YbrtYex128L86qZeql"
         },
         "hanmin": {
-          "status": "pending"
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02gc88JDf1xhbC8REQ4uDrrsdcktd2VkMvQNEbFyRCfMNT228gqY8RUknkYVVxwRBbl&id=61592290187907"
         }
-      }
+      },
+      "status": "published_website_and_all_facebook_destinations",
+      "limitations": [
+        "瀏覽器viewport設定未實際改變視窗寬度，未完成375px手機版目視驗證；沿用既有響應式blog.css。"
+      ]
     }
   ]
 }
