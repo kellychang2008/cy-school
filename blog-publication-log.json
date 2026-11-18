@@ -1,0 +1,37 @@
+{
+  "publications": [
+    {
+      "date": "2026-11-18",
+      "title": "合作開班前，補習班要先準備好的 5 件事",
+      "articleUrl": "https://www.cy-edu.com.tw/blog-gept-class-preparation.html",
+      "articleCommit": "2467ebe75d42f87e7361ec845bb8a6f4a4792303",
+      "deploymentCommit": "5b3dc9cc195ceb21bb37b9010f6bf7c63b466685",
+      "website": {
+        "status": "verified",
+        "checks": [
+          "全文、作者日期、blog列表、sitemap、robots、canonical、JSON-LD",
+          "桌面目視正常"
+        ],
+        "mobile": "待確認：viewport未實際套用"
+      },
+      "headquarters": {
+        "status": "verified",
+        "url": "https://www.facebook.com/100063753504000/posts/1753088070159626/"
+      },
+      "branches": {
+        "huashan": {
+          "status": "verified"
+        },
+        "xiaogang": {
+          "status": "verified"
+        },
+        "longhua": {
+          "status": "submitted_pending_verification"
+        },
+        "hanmin": {
+          "status": "pending"
+        }
+      }
+    }
+  ]
+}
