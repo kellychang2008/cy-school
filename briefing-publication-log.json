@@ -9,7 +9,28 @@
       "siteVerified": true,
       "headquartersPost": "https://www.facebook.com/100063753504000/posts/1759171729551260/",
       "headquartersVerified": true,
-      "branchShares": [],
+      "branchShares": [
+        {
+          "branch": "hanmin",
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid023NAjobCouf4TS1agyce1qmsu11VLxgvCmx47iLw2ekohJnUQtmTc9FJoHHxw5okNl&id=61592290187907"
+        },
+        {
+          "branch": "huashan",
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0RmfJhbLMr7doRNpn2onT8FZxiPhDAfpJmv9U8aw8XZ4WWGccKfpAzsHMDLj8eJZhl&id=100077420157448"
+        },
+        {
+          "branch": "xiaogang",
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/chienyi.english/posts/pfbid0EvHNAPA5pEDgnMqPi8gDo1WZxF8BmUMuiov5ZjWzo5cPFPVJFJKLgpgfUzp7ATdrl"
+        },
+        {
+          "branch": "longhua",
+          "status": "verified_native_share",
+          "url": "https://www.facebook.com/ahb4312/posts/pfbid032qb79cykXwgUdkQCmsWPVuaixbFqjQDcV5FhbvgMFqHUetf3yDQ16zZqSxZtcJSal"
+        }
+      ],
       "sources": [
         {
           "title": "高雄文藻公開 AI 教學成果，重點在課程實踐",
@@ -33,7 +54,9 @@
           "url": "https://www.tf.tku.edu.tw/tf/?tkuisotope=115%E5%AD%B8%E5%B9%B4%E5%BA%A6%E3%80%8C%E8%8B%B1%E8%AA%9E%E5%8F%A3%E8%AA%AA%E6%97%A5%E3%80%8D%E5%85%8D%E8%B2%BB%E8%8B%B1%E8%AA%9E%E6%9C%83%E8%A9%B1%E8%AA%B2%E7%A8%8B"
         }
       ],
-      "automationId": "automation-2"
+      "automationId": "automation-2",
+      "failures": [],
+      "notes": "本機檔案環境為唯讀，完整本期紀錄改存此repo檔；下次以官網期數及此紀錄去重。"
     }
   ]
 }
