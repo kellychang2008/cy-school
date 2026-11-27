@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>簡誼英語月月一句 跟我念</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fbf7ee;color:#17203f;font-family:"Microsoft JhengHei","PingFang TC",sans-serif}
+main{max-width:520px;margin:0 auto;padding:16px}
+header img{display:block;width:62%;margin:4px auto 12px}
+.card{background:#17203f;color:#fff8e8;border-radius:16px;padding:20px 18px;text-align:center}
+.code{text-align:right;font-size:10px;color:#8a8fa8;margin:10px 0 -10px}
+h1{font-size:28px;line-height:1.3;margin:10px 0 6px;font-family:Arial,sans-serif}
+.zh{font-size:19px;color:#e9bd45}
+audio{width:100%;margin-top:16px}
+.btns{display:flex;gap:8px;margin-top:10px}
+button{flex:1;font:inherit;font-weight:700;font-size:16px;padding:11px;border:0;border-radius:10px;background:#fff;color:#17203f;cursor:pointer}
+button.on{background:#da251d;color:#fff}
+section{background:#fff;border-radius:14px;padding:14px 16px;margin-top:12px}
+h2{font-size:17px;margin:0 0 8px;color:#da251d}
+table{width:100%;border-collapse:collapse;font-size:18px}td{padding:6px 0;border-bottom:1px solid #eee}
+td:first-child{font-weight:700;font-family:Arial,sans-serif;width:45%}
+p{margin:0;line-height:1.7;font-size:16px}
+</style></head><body><main>
+<header><img src="logo.png" alt="簡誼"></header>
+<div class="card"><h1 id="en"></h1><div class="zh" id="zh"></div>
+<audio id="au" controls preload="metadata"></audio>
+<div class="btns"><button id="slow">慢速播放</button><button id="loop">重複播放</button></div><div class="code" id="no"></div></div>
+<section><h2>跟我念</h2><p id="ch"></p></section>
+<section><h2>單字</h2><table id="wd"></table></section>
+<section><h2>小重點</h2><p id="tip"></p></section>
+</main><script>
+const D=[{"code": "2027-01", "en": "Dream big. Learn more.", "zh": "夢想遠大，學無止境", "words": [["dream", "作夢、有夢想"], ["learn", "學習"], ["more", "更多"]], "tip": "dream big 的 big 在這裡修飾動詞，意思是勇敢地作大夢。", "chunks": ["Dream big", "Learn more"]}, {"code": "2027-02", "en": "Your future starts here.", "zh": "你的未來，從這裡起步", "words": [["future", "未來"], ["start", "開始"], ["here", "這裡"]], "tip": "主詞 your future 是單數，所以動詞 start 要加 s。", "chunks": ["Your future", "starts here"]}, {"code": "2027-03", "en": "Grow with English.", "zh": "與英語一起成長", "words": [["grow", "成長"], ["with", "和…一起"], ["English", "英語"]], "tip": "句子用動詞 grow 開頭，是鼓勵大家去做的祈使句。", "chunks": ["Grow", "with English"]}, {"code": "2027-04", "en": "Small steps, big progress.", "zh": "小小步伐，大大進步", "words": [["step", "腳步"], ["progress", "進步"], ["small", "小的"]], "tip": "形容詞放在名詞前面。progress 是不可數名詞，不加 s。", "chunks": ["Small steps", "big progress"]}, {"code": "2027-05", "en": "Be confident. Be ready.", "zh": "自信出發，隨時準備好", "words": [["confident", "有自信的"], ["ready", "準備好的"]], "tip": "confident 和 ready 是形容詞，祈使句要在前面加 Be。", "chunks": ["Be confident", "Be ready"]}, {"code": "2027-06", "en": "New chapter, new challenge.", "zh": "新的篇章，新的挑戰", "words": [["chapter", "章節、篇章"], ["challenge", "挑戰"], ["new", "新的"]], "tip": "new 是形容詞，放在名詞前面：new chapter、new challenge。", "chunks": ["New chapter", "new challenge"]}, {"code": "2027-07", "en": "English opens the world.", "zh": "學好英語，打開世界", "words": [["open", "打開"], ["world", "世界"]], "tip": "主詞 English 是單數，所以用 opens。world 前面要加 the。", "chunks": ["English opens", "the world"]}, {"code": "2027-08", "en": "Speak up. Stand out.", "zh": "勇敢開口，讓世界看見你", "words": [["speak up", "大聲說出來、勇敢發言"], ["stand out", "脫穎而出"]], "tip": "這是兩個片語動詞，動詞加上 up 或 out，意思就不一樣了。", "chunks": ["Speak up", "Stand out"]}, {"code": "2027-09", "en": "Great teaching, real progress.", "zh": "專業教學，看見實力", "words": [["teaching", "教學"], ["real", "真正的"], ["progress", "進步"]], "tip": "teach 是教，加上 -ing 就變成名詞 teaching，教學。", "chunks": ["Great teaching", "real progress"]}, {"code": "2027-10", "en": "Keep going. Keep growing.", "zh": "持續前進，不斷成長", "words": [["keep", "持續"], ["go", "前進"], ["grow", "成長"]], "tip": "keep 後面接動詞加 -ing，表示持續做一件事。", "chunks": ["Keep going", "Keep growing"]}, {"code": "2027-11", "en": "Strong basics, higher goals.", "zh": "打穩基礎，挑戰更高", "words": [["basics", "基礎"], ["goal", "目標"], ["higher", "更高的"]], "tip": "higher 是 high 的比較級，字尾加 -er。", "chunks": ["Strong basics", "higher goals"]}, {"code": "2027-12", "en": "Give thanks. Shine bright.", "zh": "心懷感謝，閃亮收尾", "words": [["give thanks", "表達感謝"], ["shine", "發光"], ["bright", "明亮地"]], "tip": "用動詞開頭是祈使句；bright 在這裡修飾動詞 shine。", "chunks": ["Give thanks", "Shine bright"]}];
+const $=id=>document.getElementById(id), au=$('au');
+let slow=false, loop=false;
+function show(n){
+  const x=D.find(d=>d.code===n)||D[0];
+  $('no').textContent=x.code; $('en').textContent=x.en; $('zh').textContent=x.zh; $('tip').textContent=x.tip;
+  $('ch').textContent=x.chunks.join('  /  ')+'  →  '+x.en;
+  $('wd').replaceChildren(...x.words.map(w=>{const tr=document.createElement('tr');w.forEach(t=>{const td=document.createElement('td');td.textContent=t;tr.appendChild(td)});return tr}));
+  au.src='audio/'+x.code+'.mp3'; au.playbackRate=au.defaultPlaybackRate=slow?0.85:1;
+}
+$('slow').onclick=e=>{slow=!slow;e.target.classList.toggle('on',slow);au.playbackRate=au.defaultPlaybackRate=slow?0.85:1};
+$('loop').onclick=e=>{loop=!loop;e.target.classList.toggle('on',loop);au.loop=loop};
+show(new URLSearchParams(location.search).get('n'));
+</script></body></html>
